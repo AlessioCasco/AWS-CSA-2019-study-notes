@@ -12,7 +12,8 @@ This is my collection of notes from the
 It can be used also for the
 _[Udemy | AWS Certified Solutions Architect - Associate 2019](https://www.udemy.com/aws-certified-solutions-architect-associate/) one, since they use the same contents made by the [A cloud Guru](https://acloud.guru/) team._
 
-## Updates:
+## Updates
+
 \- Update 4 April 2019 -
 
 * acloud.guru [just updated](https://info.acloud.guru/resources/whats-new-april-2019) the CSA course.
