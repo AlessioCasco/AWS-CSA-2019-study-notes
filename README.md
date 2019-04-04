@@ -8,13 +8,19 @@
 ================
 
 This is my collection of notes from the
-[A Cloud Guru | AWS Certified Solutions Architect - Associate](https://acloud.guru/learn/aws-certified-solutions-architect-associate) course.
+[A Cloud Guru | AWS Certified Solutions Architect - Associate - 2018](https://acloud.guru/learn/aws-certified-solutions-architect-associate-2018) course.
 It can be used also for the
 _[Udemy | AWS Certified Solutions Architect - Associate 2019](https://www.udemy.com/aws-certified-solutions-architect-associate/) one, since they use the same contents made by the [A cloud Guru](https://acloud.guru/) team._
 
+## Updates:
+\- Update 4 April 2019 -
+
+* acloud.guru [just updated](https://info.acloud.guru/resources/whats-new-april-2019) the CSA course.
+* From a quick look it seems they put all the Exam Tips they collected in previous months within the relative sections of the course and now Lambda has its own section, is not anymore within the EC2 one.
+
 ## What it is
 
-The A cloud Guru course is huge and in order to explain to you the basic concepts, it has sometimes to give you pieces of informations that are not required to be known in order to pass the exam. So my intent here is to save in one place everything the exam requires you to know without the other stuff.
+The A cloud Guru course is huge and in order to explain to you the basic concepts, it has sometimes to give you pieces of information that are not required to be known in order to pass the exam. So my intent here is to save in one place everything the exam requires you to know without the other stuff.
 
 ## What it is not
 
@@ -22,7 +28,7 @@ This is not a substitution of the course, you MUST go through the course to be a
 
 ## Meaning of some emphasis used in the .md files
 
-_Italics:_ Is used for personal notes or addictions to the course, like tips or usefull notes about the subject.
+_Italics:_ Is used for personal notes or addictions to the course, like tips or useful notes about the subject.
 
 ## AWS Resources
 
