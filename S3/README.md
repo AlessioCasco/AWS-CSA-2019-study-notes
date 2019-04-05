@@ -37,6 +37,7 @@
 * Tiered Storage (classes) available
 * You can have lifecycle management
 * Versioning
+* Supports [multi-part upload](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html)
 * Encryption
 * Access control (permissions on single files) and bucket policies (permissions on buckets)
 
@@ -49,6 +50,9 @@
   * Expedited: few minutes for retrieval
   * Standard: 3-5 hours for retrieval
   * Bulk: 5-12 hours for retrieval
+  * It encrypts data by default
+  * Regionally availability
+  * Designed with 11x9s durability, like S3
 
 ### [Charges](https://aws.amazon.com/s3/pricing/)
 
