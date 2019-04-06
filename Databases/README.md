@@ -75,7 +75,8 @@ Amazon DynamoDB is a key-value and document database that delivers single-digit 
 
 * Uses SSD storage.
 * Spread across 3 distinct data centres.
-* Eventual Consistent Reads or Strongly Consistent Reads.
+* Eventual Consistent Reads (Default)
+* Strongly Consistent Reads.
 * It's scalable.
 * DynamoDB can be very expensive for writes.
 
