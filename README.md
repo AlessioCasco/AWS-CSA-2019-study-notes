@@ -39,6 +39,8 @@ _Italics:_ Is used for personal notes or addictions to the course, like tips or 
 * [Exam Sample Questions](https://d1.awsstatic.com/training-and-certification/docs/AWS_Certified_Solutions_Architect_Associate_Sample_Questions.pdf)
 * [Book your exam](https://www.aws.training/Certification)
 
-## Contributions
+## Contributions 🙏
 
-If you find mistakes, typos or you think something should be modified, added, revisited or updated, feel free to open a PR with a brief explanation of your request.
+If you find mistakes, typos or you think something should be modified, revisited or updated, feel free to open a PR or a issue with a brief explanation of your request.
+
+If something is missing instead, have a look at [ToDo list](https://github.com/AlessioCasco/AWS-CSA-2019-study-notes/issues/4#issue-431706704) and check if that missing part has been already spotted. If not, feel free to PR it or add a [new checkbox](https://help.github.com/en/articles/about-task-lists#creating-task-lists) on the issue.
