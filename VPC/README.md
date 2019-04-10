@@ -8,6 +8,17 @@ Think of a VPC as a virtual data centre in the cloud.
 
 Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define. You have complete control over your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways.
 
+### What are the components of Amazon VPC
+
+* A Virtual Private Cloud: A logically isolated virtual network in the AWS cloud. You define a VPC’s IP address space from ranges you select.
+* Subnet: A segment of a VPC’s IP address range where you can place groups of isolated resources.
+* Internet Gateway: The Amazon VPC side of a connection to the public Internet.
+* NAT Gateway: A highly available, managed Network Address Translation (NAT) service for your resources in a private subnet to access the Internet.
+* Virtual private gateway: The Amazon VPC side of a VPN connection.
+* Peering Connection: A peering connection enables you to route traffic via private IP addresses between two peered VPCs.
+* VPC Endpoints: Enables private connectivity to services hosted in AWS, from within your VPC without using an Internet Gateway, VPN, Network Address Translation (NAT) devices, or firewall proxies.
+* Egress-only Internet Gateway: A stateful gateway to provide egress only access for **IPv6** traffic from the VPC to the Internet.
+
 ![VPC_Diagram](https://docs.aws.amazon.com/vpc/latest/userguide/images/default-vpc-diagram.png)
 
 * You can have multiple VPC in a region (default up to 5).
