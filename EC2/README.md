@@ -12,9 +12,15 @@ Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure,
 * [Reserved Instance (RI)](https://aws.amazon.com/ec2/pricing/reserved-instances/): Provide a significant discount (up to 75%) compared to On-Demand pricing and provide a capacity reservation when used in a specific Availability Zone. You have to enter a contract.
 * [Spot](https://aws.amazon.com/ec2/spot/): Amazon EC2 Spot instances allow you to request spare Amazon EC2 computing capacity for up to 90% off the On-Demand price.
 
-    If you terminate an instance, you will pay for the complete hour
+  * If you terminate an instance, you will pay for the complete hour.
+  * If Amazon terminates the instance, you won't pay for the complete hour.
+  * The following are the possible reasons that Amazon EC2 might [interrupt your Spot Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html):
+    * Price – The Spot price is greater than your maximum price.
+    * Capacity – If there are not enough unused EC2 instances to meet the demand for Spot Instances, Amazon EC2 interrupts Spot Instances. The order in which the instances are interrupted is determined by Amazon EC2.
+    * Constraints – If your request includes a constraint such as a launch group or an Availability Zone group, these Spot Instances are terminated as a group when the constraint can no longer be met.
 
-    If Amazon terminates the instance, you won't pay for the complete hour.
+
+
 * [Dedicated Hosts](https://aws.amazon.com/ec2/dedicated-hosts/): Is a physical server with EC2 instance capacity fully dedicated to your use.
 
 ### [What's EBS](https://aws.amazon.com/ebs/)
