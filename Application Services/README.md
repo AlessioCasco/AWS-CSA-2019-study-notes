@@ -56,5 +56,6 @@ Amazon API Gateway is a fully managed service that makes it easy for developers 
 Amazon Kinesis makes it easy to collect, process, and analyze real-time, streaming data so you can get timely insights and react quickly to new information.
 
 * Kinesis streams: It consists of shards, where each stream is saved and stored for 24h, up to 7 days. You can have multiple shards on each stream. A consumer then read from the shards and process the data.
-* Kinesis Firehouse: It doesn't have shards, so data traverses the Firehouse. Data has to be processed immediately with lambda or stored in S3 for example.
-* Kinesis Analytics: It allows you to analyze the data that exists in Kinesis Firehouse of streams.
+* Kinesis Firehose: It doesn't have shards, so data traverses the Firehose. Data has to be processed immediately with lambda or stored in S3 for example.
+  * It can stream data to Amazon S3, Amazon Redshift, Amazon Elasticsearch Service, and Splunk.
+* Kinesis Analytics: It allows you to analyze the data that exists in Kinesis Firehose of streams.

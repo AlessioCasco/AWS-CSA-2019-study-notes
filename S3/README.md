@@ -5,12 +5,12 @@
 ### [What's S3](https://aws.amazon.com/s3/)
 
 * Object-based storage: you can save only object, you can't, for example, install an OS (In this case you need block-based storage).
-* Files can save from 0 Bytes to 5 TB
-* No storage Limits
-* Files are stored in Buckets (a folder in a cloud)
-* S3 is a universal namespace, the name must be unique globally. So you can have the same name as someone else
-* Sample of an S3 URL: ```https://s3-eu-west-1.amazonaws.com/yourbucket```
-* When you upload an object in S3 you get an HTTP 200 OK code back
+* Files can save from 0 Bytes to 5 TB.
+* No storage Limits.
+* Files are stored in Buckets (a folder in a cloud).
+* S3 is a universal namespace, the name must be unique globally. So you **cannot** have the same name as someone else.
+* Sample of an S3 URL: ```https://s3-eu-west-1.amazonaws.com/yourbucket```.
+* When you upload an object in S3 you get an HTTP 200 OK code back.
 
 ### Data Consistency for S3
 

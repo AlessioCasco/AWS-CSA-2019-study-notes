@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/github/license/AlessioCasco/AWS-CSA-2019-study-notes.svg)
 
-![Course_year](https://img.shields.io/badge/Course%20Year-2019-green.svg)
+![Course_year](https://img.shields.io/badge/Course%20Year-2019-brightgreen.svg)
 ![Last_Commit](https://img.shields.io/github/last-commit/AlessioCasco/AWS-CSA-2019-study-notes.svg)
 
 ================
