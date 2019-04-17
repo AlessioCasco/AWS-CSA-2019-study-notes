@@ -12,12 +12,21 @@ This is my collection of notes from the
 It can be used also for the
 _[Udemy | AWS Certified Solutions Architect - Associate 2019](https://www.udemy.com/aws-certified-solutions-architect-associate/) one, since they use the same contents made by the [A cloud Guru](https://acloud.guru/) team._
 
+================
+
 ## Updates
 
 \- Update 4 April 2019 -
 
 * acloud.guru [just updated](https://info.acloud.guru/resources/whats-new-april-2019) the CSA course.
 * From a quick look it seems they put all the Exam Tips they collected in previous months within the relative sections of the course and now Lambda has its own section, is not anymore within the EC2 one.
+
+\- Update 17 April 2019 -
+
+* Added the md's for the [Exam Readiness Training](https://www.aws.training/learningobject/curriculum?id=20685)
+* Reorganized the structure of the repo.
+
+================
 
 ## What it is
 
