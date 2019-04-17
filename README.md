@@ -42,7 +42,7 @@ This is not a substitution of the course, you MUST go through the course to be a
 * Did the final exam and based on wrong answers, went back to the notes to revise the concepts not known.
 * Purchased the [AWS Certified Solutions Architect Associate Practice Exams by Jon Bonso](https://www.udemy.com/aws-certified-solutions-architect-associate-amazon-practice-exams) but personally found not very helpful and sometimes misleading. Some questions are very different from the exam and sometimes wrong questions can be actually true.
 * One week before the exam:
-  * Took the [Exam Readiness Training](https://www.aws.training/learningobject/curriculum?id=20685), this is a good recap and a must do IMHO, it's 2 hours long, free and it gives you good pieces of information about how to think and not be tricked by the exam.
+  * Took the [Exam Readiness Training](https://www.aws.training/learningobject/curriculum?id=20685), this is a good recap and a must do IMHO, it's 2 hours long, free and it gives you also good pieces of information about how to think and not be tricked by the exam. You can find the md's in the root of the repo
   * If you have never taken an AWS exam I suggest to [take a Practice Exam](https://www.aws.training/certification?src=cert-prep), this will help you familiarize and see how the course will look like. This costs **20$**
   * Use the [acloud.guru Disussions](https://acloud.guru/forums/aws-certified-solutions-architect-associate-2019/recent?p=1) and check all posts about exam feedbacks. Study everything is mentioned there that you are not comfortable with.
   * Do as many tests as you can and revise what you don't know.
