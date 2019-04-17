@@ -33,4 +33,4 @@ An Az is one or more data centres, each with redundant power, networking and con
 
 ## Network & Content Delivery
 
-* Route 53 for Amazon DNS servers and VBC's for virtual cloud
+* Route 53 for Amazon DNS servers, VPC's for virtual cloud and CloudFront for CDN's
