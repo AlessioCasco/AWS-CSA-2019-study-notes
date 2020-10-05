@@ -143,6 +143,14 @@ S3 is charged for:
 Only creations and modifications are replicated to the bucket in the other regions NOT the delete
 * You can't replicate over multiple buckets, the maps are always 1-to-1
 
+## DataSync
+
+* Used to move large amounts of data from on-premises to AWS.
+* Used with NFS and SMB-compatible file systems
+* Replication can be done hourly, daily or weekly
+* Install the DataSync agent to start the replication
+* Can be used to replicate EFS TO EFS
+
 ## [CloudFront](https://aws.amazon.com/cloudfront/)
 
 ### [What's a CDN](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)
