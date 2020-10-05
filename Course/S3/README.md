@@ -102,6 +102,15 @@ S3 is charged for:
 * Can be used in conjunction with versioning.
 * Can be applied to current versions and previous versions.
 
+### S3 Object Lock
+
+* Use S3 Object Lock to store objects using a write once, read many (WORM) model
+* Object locks can be on individual objects or applied across the bucket as a whole
+* Object locks come in two modes: governance mode and compliance mode.
+   Governance mode : Users can't overwrite or delete an object version or alter its lock settings unless they have special permissions.
+   Compliance mode : A protected object version can't be overwritten or deleted by any user, including the root user in your AWS account.
+* S3 Glacier Vault Lock allows you to easily deploy and enforce compliance control for individual S4 Glacier vaults with a Vault Lock Policy. Once locked, the policy can no longer be changed.
+
 ### [S3 Cross region replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html)
 
 * Regions must be unique
