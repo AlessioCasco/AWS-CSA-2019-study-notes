@@ -111,6 +111,14 @@ S3 is charged for:
    Compliance mode : A protected object version can't be overwritten or deleted by any user, including the root user in your AWS account.
 * S3 Glacier Vault Lock allows you to easily deploy and enforce compliance control for individual S4 Glacier vaults with a Vault Lock Policy. Once locked, the policy can no longer be changed.
 
+## S3 Performance
+
+* More prefixes, better performance
+    mybucketname/folder/subfolder/file.jpg > (/folder/subfolder) is prefix
+* If using SSE KMS to encrypt your objects in S3, you must keep in mind the KMS limits. (Currently, you cannot request a quota increase for KMS)
+* Use multipart uploads to increase performance when uploading files to S3. (Should be used for any files over 100MB and must be used for files over 5 GB)
+* Use S3 byte range to increase download performance.
+
 ### [S3 Cross region replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html)
 
 * Regions must be unique
