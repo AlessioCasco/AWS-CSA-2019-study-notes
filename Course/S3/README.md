@@ -188,4 +188,9 @@ On console: Amazon S3 => Your_Bucket => Permissions => Bucket Policy
 }
 ```
 
+### Athena vs Macie
+
+* Athena is an interactive query service which enables you to analyze and query data located in S3 using standard SQL.
+* Macie is a security service which uses ML and NLP to discover, classify and protect sensitive data stored in S3.
+
 _[!!! Read the S3 FAQs before the exam !!!](https://aws.amazon.com/s3/faqs/)_
