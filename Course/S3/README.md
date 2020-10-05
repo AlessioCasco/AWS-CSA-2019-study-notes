@@ -65,6 +65,7 @@ S3 is charged for:
 * Storage management pricing
 * Data Transfer Pricing
 * Transfer acceleration (it's using CloudFront the AWS CDN) using edge locations
+* Cross Region Replication
 
 ### [Server side Encryption and ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html)
 
