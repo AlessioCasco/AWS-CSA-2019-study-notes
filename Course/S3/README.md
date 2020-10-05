@@ -96,6 +96,12 @@ S3 is charged for:
     and
     [Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html)
 
+### S3 Lifecycle Management
+
+* Automates moving your objects between the different storage tiers.
+* Can be used in conjunction with versioning.
+* Can be applied to current versions and previous versions.
+
 ### [S3 Cross region replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html)
 
 * Regions must be unique
