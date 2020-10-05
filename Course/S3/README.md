@@ -45,14 +45,16 @@
 
 * S3 standard: 99.99% availability 11x9s durability (it sustains the loss of 2 facilities concurrently)
 * S3 IA: (Infrequently Accessed): For data that is accessed less frequently, but needs rapid access. You are charged a retrieval fee per GB retrieved
-* S3 One Zone IA: Like S3 IA but data is stored only in one AZ
-* Glacier: Most cheap, used for archival only.
+* S3 Intelligent Tiering : Uses ML to optimise cost by automatically moving data to the most effective access tier.
+* S3 One Zone IA: Like S3 IA but data is stored only in one AZ (availability 99.50%)
+* S3 Glacier: Most cheap, used for archival only.
   * Expedited: few minutes for retrieval
   * Standard: 3-5 hours for retrieval
   * Bulk: 5-12 hours for retrieval
   * It encrypts data by default
   * Regionally availability
   * Designed with 11x9s durability, like S3
+ * S3 Glacier Deep Archive : Lowest cost storage class where a retrieval time of 12 hours is acceptable.
 
 ### [Charges](https://aws.amazon.com/s3/pricing/)
 
