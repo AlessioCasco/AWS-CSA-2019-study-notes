@@ -166,6 +166,13 @@ Only creations and modifications are replicated to the bucket in the other regio
     * You can Have two types: Web that is for generic web contents and RTMP that is for video streaming
     * TTL: time to live of the cached object.
 
+### CloudFront Signed URL's and Cookies
+
+* Use signed URLs/cookies when you want to secure content so that only the people you authorize are able to access it.
+* A signed URL is for individual files. 1 file = 1 URL
+* A signed cookie is for multiple files. 1 cookie = multiple files.
+* If your origin is EC2, then use CloudFront. If your origin is S3, you might want to use S3 signed URL.
+
 ### [S3 Security & Encryption](https://aws.amazon.com/blogs/aws/new-amazon-s3-encryption-security-features/)
 
 * You can configure S3 to create access logs for requests made to the S3 bucket
