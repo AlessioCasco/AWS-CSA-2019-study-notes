@@ -142,7 +142,7 @@ Only creations and modifications are replicated to the bucket in the other regio
 What's an Amazon Storage Gateway: AWS Storage Gateway connects an on-premises software appliance with cloud-based storage to provide seamless integration with data security features between your on-premises IT environment and the AWS storage infrastructure.
 
 * File Gateway: For flat files, stored directly in S3. You can NFS Mount points
-* VOlume gateway (iSCSI): Block-based storage
+* Volume gateway (iSCSI): Block-based storage
   * Store volume (you keep all your data on prem)
   * Cached Volumes (you keep only the most recent data on prem)
 Tape Gateway (VTL): Virtual tapes
