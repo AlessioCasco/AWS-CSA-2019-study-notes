@@ -126,14 +126,14 @@ Only creations and modifications are replicated to the bucket in the other regio
   * Bucket policies: Permission bucket wide
   * Access control list: Permissions that can be applied to the single object
 
-* Encryption:
-  * In transit: from to your bucket, HTTPS for example
+* Encryption types:
+  * In transit: from to your bucket, HTTPS for example (Using SSl/TLS)
   * At rest:
     * Server-side encryption:
       * S3 Managed Keys: SSE-S3 (Keys are managed by S3)
       * Key Management Service: SS3-KMS the customer manages the keys
       * Server-side encryption: Here you manage the keys, and Amazon manage the writes
-  * Client-side Encryption: You encrypt the data and you upload it encrypted to S3
+    * Client-side Encryption: You encrypt the data and you upload it encrypted to S3
 
 ## [Amazon Storage](https://aws.amazon.com/products/storage/)
 
