@@ -119,6 +119,11 @@ S3 is charged for:
 * Use multipart uploads to increase performance when uploading files to S3. (Should be used for any files over 100MB and must be used for files over 5 GB)
 * Use S3 byte range to increase download performance.
 
+## S3 Select and Glacier Select
+
+* S3 Select enables application to retrieve only a subset of data from an object using simple SQL expressions. (Achieves drastic performance increases as much as 400%)
+* Glacier select allows you to run SQL queries against Glacier directly.
+
 ### [S3 Cross region replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html)
 
 * Regions must be unique
