@@ -124,6 +124,14 @@ S3 is charged for:
 * S3 Select enables application to retrieve only a subset of data from an object using simple SQL expressions. (Achieves drastic performance increases as much as 400%)
 * Glacier select allows you to run SQL queries against Glacier directly.
 
+### Sharing S3 Buckets Between Accounts
+
+3 Different ways to share S3 buckets across accounts
+
+* Using Bucket Policies & IAM (applies across the entire bucket). Programmatic Access Only.
+* Using Bucket ACLs & IAM (individual objects). Programmtic Access Only.
+* Cross-account IAM Roles. Programmatic AND Console access.
+
 ### [S3 Cross region replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html)
 
 * Regions must be unique
