@@ -153,6 +153,8 @@ Import Export is still available and was the first version of snowball, you used
 
 Snowball is (an appliance) a petabyte-scale data transport solution that uses devices designed to be secure to transfer large amounts of data into and out of the AWS Cloud
 
+In the US regions, Snowballs come in two sizes: 50 TB and 80 TB. All other regions have the 80 TB Snowballs only.
+
 Snowball edge: is a 100TB data transfer device with onboard storage-computer capabilities. It's like an AWS DC in a box
 
 Snowmobile: AWS Snowmobile is an Exabyte-scale data transfer service used to move extremely large amounts of data to AWS. A truck full of disks basically.
