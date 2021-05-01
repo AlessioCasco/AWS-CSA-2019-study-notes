@@ -45,14 +45,16 @@
 
 * S3 standard: 99.99% availability 11x9s durability (it sustains the loss of 2 facilities concurrently)
 * S3 IA: (Infrequently Accessed): For data that is accessed less frequently, but needs rapid access. You are charged a retrieval fee per GB retrieved
-* S3 One Zone IA: Like S3 IA but data is stored only in one AZ
-* Glacier: Most cheap, used for archival only.
+* S3 Intelligent Tiering : Uses ML to optimise cost by automatically moving data to the most effective access tier.
+* S3 One Zone IA: Like S3 IA but data is stored only in one AZ (availability 99.50%)
+* S3 Glacier: Most cheap, used for archival only.
   * Expedited: few minutes for retrieval
   * Standard: 3-5 hours for retrieval
   * Bulk: 5-12 hours for retrieval
   * It encrypts data by default
   * Regionally availability
   * Designed with 11x9s durability, like S3
+ * S3 Glacier Deep Archive : Lowest cost storage class where a retrieval time of 12 hours is acceptable.
 
 ### [Charges](https://aws.amazon.com/s3/pricing/)
 
@@ -63,6 +65,7 @@ S3 is charged for:
 * Storage management pricing
 * Data Transfer Pricing
 * Transfer acceleration (it's using CloudFront the AWS CDN) using edge locations
+* Cross Region Replication
 
 ### [Server side Encryption and ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html)
 
@@ -93,6 +96,42 @@ S3 is charged for:
     and
     [Versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html)
 
+### S3 Lifecycle Management
+
+* Automates moving your objects between the different storage tiers.
+* Can be used in conjunction with versioning.
+* Can be applied to current versions and previous versions.
+
+### S3 Object Lock
+
+* Use S3 Object Lock to store objects using a write once, read many (WORM) model
+* Object locks can be on individual objects or applied across the bucket as a whole
+* Object locks come in two modes: governance mode and compliance mode.
+   Governance mode : Users can't overwrite or delete an object version or alter its lock settings unless they have special permissions.
+   Compliance mode : A protected object version can't be overwritten or deleted by any user, including the root user in your AWS account.
+* S3 Glacier Vault Lock allows you to easily deploy and enforce compliance control for individual S4 Glacier vaults with a Vault Lock Policy. Once locked, the policy can no longer be changed.
+
+## S3 Performance
+
+* More prefixes, better performance
+    mybucketname/folder/subfolder/file.jpg > (/folder/subfolder) is prefix
+* If using SSE KMS to encrypt your objects in S3, you must keep in mind the KMS limits. (Currently, you cannot request a quota increase for KMS)
+* Use multipart uploads to increase performance when uploading files to S3. (Should be used for any files over 100MB and must be used for files over 5 GB)
+* Use S3 byte range to increase download performance.
+
+## S3 Select and Glacier Select
+
+* S3 Select enables application to retrieve only a subset of data from an object using simple SQL expressions. (Achieves drastic performance increases as much as 400%)
+* Glacier select allows you to run SQL queries against Glacier directly.
+
+### Sharing S3 Buckets Between Accounts
+
+3 Different ways to share S3 buckets across accounts
+
+* Using Bucket Policies & IAM (applies across the entire bucket). Programmatic Access Only.
+* Using Bucket ACLs & IAM (individual objects). Programmtic Access Only.
+* Cross-account IAM Roles. Programmatic AND Console access.
+
 ### [S3 Cross region replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html)
 
 * Regions must be unique
@@ -103,6 +142,14 @@ S3 is charged for:
 * If you delete an object in the primary bucket, the delete action and markers won't be done or replicated in your remote bucket, this is a security function.
 Only creations and modifications are replicated to the bucket in the other regions NOT the delete
 * You can't replicate over multiple buckets, the maps are always 1-to-1
+
+## DataSync
+
+* Used to move large amounts of data from on-premises to AWS.
+* Used with NFS and SMB-compatible file systems
+* Replication can be done hourly, daily or weekly
+* Install the DataSync agent to start the replication
+* Can be used to replicate EFS TO EFS
 
 ## [CloudFront](https://aws.amazon.com/cloudfront/)
 
@@ -119,6 +166,13 @@ Only creations and modifications are replicated to the bucket in the other regio
     * You can Have two types: Web that is for generic web contents and RTMP that is for video streaming
     * TTL: time to live of the cached object.
 
+### CloudFront Signed URL's and Cookies
+
+* Use signed URLs/cookies when you want to secure content so that only the people you authorize are able to access it.
+* A signed URL is for individual files. 1 file = 1 URL
+* A signed cookie is for multiple files. 1 cookie = multiple files.
+* If your origin is EC2, then use CloudFront. If your origin is S3, you might want to use S3 signed URL.
+
 ### [S3 Security & Encryption](https://aws.amazon.com/blogs/aws/new-amazon-s3-encryption-security-features/)
 
 * You can configure S3 to create access logs for requests made to the S3 bucket
@@ -126,14 +180,14 @@ Only creations and modifications are replicated to the bucket in the other regio
   * Bucket policies: Permission bucket wide
   * Access control list: Permissions that can be applied to the single object
 
-* Encryption:
-  * In transit: from to your bucket, HTTPS for example
+* Encryption types:
+  * In transit: from to your bucket, HTTPS for example (Using SSl/TLS)
   * At rest:
     * Server-side encryption:
       * S3 Managed Keys: SSE-S3 (Keys are managed by S3)
       * Key Management Service: SS3-KMS the customer manages the keys
       * Server-side encryption: Here you manage the keys, and Amazon manage the writes
-  * Client-side Encryption: You encrypt the data and you upload it encrypted to S3
+    * Client-side Encryption: You encrypt the data and you upload it encrypted to S3
 
 ## [Amazon Storage](https://aws.amazon.com/products/storage/)
 
@@ -142,7 +196,7 @@ Only creations and modifications are replicated to the bucket in the other regio
 What's an Amazon Storage Gateway: AWS Storage Gateway connects an on-premises software appliance with cloud-based storage to provide seamless integration with data security features between your on-premises IT environment and the AWS storage infrastructure.
 
 * File Gateway: For flat files, stored directly in S3. You can NFS Mount points
-* VOlume gateway (iSCSI): Block-based storage
+* Volume gateway (iSCSI): Block-based storage
   * Store volume (you keep all your data on prem)
   * Cached Volumes (you keep only the most recent data on prem)
 Tape Gateway (VTL): Virtual tapes
@@ -152,6 +206,8 @@ Tape Gateway (VTL): Virtual tapes
 Import Export is still available and was the first version of snowball, you used to ship your drives to AWS
 
 Snowball is (an appliance) a petabyte-scale data transport solution that uses devices designed to be secure to transfer large amounts of data into and out of the AWS Cloud
+
+In the US regions, Snowballs come in two sizes: 50 TB and 80 TB. All other regions have the 80 TB Snowballs only.
 
 Snowball edge: is a 100TB data transfer device with onboard storage-computer capabilities. It's like an AWS DC in a box
 
@@ -187,5 +243,10 @@ On console: Amazon S3 => Your_Bucket => Permissions => Bucket Policy
   ]
 }
 ```
+
+### Athena vs Macie
+
+* Athena is an interactive query service which enables you to analyze and query data located in S3 using standard SQL.
+* Macie is a security service which uses ML and NLP to discover, classify and protect sensitive data stored in S3.
 
 _[!!! Read the S3 FAQs before the exam !!!](https://aws.amazon.com/s3/faqs/)_
